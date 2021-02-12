@@ -14,6 +14,11 @@ namespace Algorithms.FractionalKnapsack
 
         public void Solve(IPlotter plotter)
         {
+            // Given an array of N items, where each item is represented by a tuple (weight, value)
+            // Given a knapsack weight capacity
+            // Find the maximum total value in the knapsack without exceeding its capacity
+            // Items can be fractioned
+
             ReadOnlySpan<Item> items = stackalloc Item[]
             {
                 new Item { Weight = 40, Value = 40, IsFraction = false },

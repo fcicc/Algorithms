@@ -13,6 +13,10 @@ namespace Algorithms.CoinChange
 
         public void Solve(IPlotter plotter)
         {
+            // Given an array of numbers that represent the values of each coin
+            // Given an amount
+            // Find the minimum number of coins that are needed to make that amount
+
             ReadOnlySpan<int> coins = stackalloc int[] { 1, 5, 10, 25, 50 };
             const int value = 74;
 

@@ -13,6 +13,10 @@ namespace Algorithms.NQueens
 
         public void Solve(IPlotter plotter)
         {
+            // Given a magnitude N
+            // Place N queens in a NxN chess board
+            // in such a way that no queens attack each other
+
             const int size = 8;
             var board = _strategy.Solve(size);
 
