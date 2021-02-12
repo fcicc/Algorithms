@@ -54,28 +54,21 @@ namespace Algorithms.NQueens
 
         private bool CanPlaceQueenAt(Board board, int rank, int file)
         {
-            int i, j;
+            int i, j, k;
 
-            // same file (column)
-            for (i = rank - 1; i >= 1; i--)
+            for (i = rank - 1, j = file - 1, k = file + 1;
+                 i >= 1;
+                 i--, j--, k++)
             {
                 if (board[i, file].HasQueen)
                 {
                     return false;
                 }
-            }
-
-            // same diagonals
-            for (i = rank - 1, j = file - 1; i >= 1 && j >= 1; i--, j--)
-            {
-                if (board[i, j].HasQueen)
+                if (j >= 1 && board[i, j].HasQueen)
                 {
                     return false;
                 }
-            }
-            for (i = rank - 1, j = file + 1; i >= 1 && j <= board.Size; i--, j++)
-            {
-                if (board[i, j].HasQueen)
+                if (k <= board.Size && board[i, k].HasQueen)
                 {
                     return false;
                 }

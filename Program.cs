@@ -1,4 +1,4 @@
-﻿using Algorithms.CoinChange;
+﻿using Algorithms.NQueens;
 
 namespace Algorithms
 {
@@ -7,8 +7,8 @@ namespace Algorithms
         public static void Main(string[] args)
         {
             IPlotter plotter = new ConsolePlotter();
-            IProblem problem = new CoinChangeProblem(
-                new CoinChangeDynamicStrategy()
+            IProblem problem = new NQueensProblem(
+                new NQueensBacktrackingStrategy()
             );
             problem.Solve(plotter);
         }

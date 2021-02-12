@@ -6,12 +6,12 @@ namespace Algorithms
     {
         public static void PlotValue<T>(this IPlotter plotter, string name, T value)
         {
-            Console.WriteLine($"{name}: {value}");
+            plotter.PlotLine($"{name}: {value}");
         }
 
         public static void PlotValues<T>(this IPlotter plotter, string name, ReadOnlySpan<T> values)
         {
-            Console.WriteLine($"{name}:");
+            plotter.PlotLine($"{name}:");
             for (var i = 0; i < values.Length; i++)
             {
                 plotter.PlotValue($"  {i}", values[i]);
